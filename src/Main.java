@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 
 public class Main {
 
@@ -7,20 +7,24 @@ public class Main {
 	 */
 	public static void main(String[] args) {
 		
-		MakeArray makeArr = new MakeArray();
-		int[] arr = makeArr.getArray(5000);
+		ArrayMaker arrays = new ArrayMaker();
+		int[] arr = arrays.getArray(50000);
 		
-		for(int i=0;i<arr.length;i++) {
-			System.out.print(arr[i] + " ");
-		}
-		System.out.print("\n");
+		int[] ascArr = arrays.ascSort(arr);
+		int[] descArr = arrays.descSort(ascArr);
 		
-		//int[] arr = new int[] {4, 1, 3, -23};
-		
+//		System.out.println(Arrays.toString(arr));
+//		System.out.println(Arrays.toString(ascArr));
+//		System.out.println(Arrays.toString(descArr));
+			
 		QuickSort quickSort = new QuickSort();		
 		quickSort.run(arr);
-		System.out.print("\n");
+		quickSort.run(ascArr);
+		quickSort.run(descArr);
+
 		SelectionSort selSort = new SelectionSort();
 		selSort.run(arr);
+		selSort.run(ascArr);
+		selSort.run(descArr);
 	}
 }
