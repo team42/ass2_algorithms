@@ -8,7 +8,7 @@ public class Main {
 	public static void main(String[] args) {
 		
 		MakeArray makeArr = new MakeArray();
-		int[] arr = makeArr.getArray(1000);
+		int[] arr = makeArr.getArray(5000);
 		
 		for(int i=0;i<arr.length;i++) {
 			System.out.print(arr[i] + " ");
