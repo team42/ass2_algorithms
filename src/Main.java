@@ -1,5 +1,12 @@
 import java.util.Arrays;
 
+/**
+ * $Id$
+ * 
+ * @author Lasse
+ *
+ */
+
 public class Main {
 
 	/**
