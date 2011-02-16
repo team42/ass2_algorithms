@@ -18,8 +18,7 @@ public class SelectionSort {
 	 * 
 	 * @param arr - Array to be sorted using the selection sort algorithm.
 	 */
-	public void run(int[] arr) {
-		System.out.print("SelectionSort: ");
+	public static long run(int[] arr) {
 		long t0 = System.nanoTime();
 		
 	    for (int i=0; i<arr.length-1; i++) {
@@ -33,6 +32,6 @@ public class SelectionSort {
 	        }
 	    }
 	    long t = System.nanoTime() - t0;
-	   	System.out.println(t + "ms");
+	   	return t;
 	}	
 }
