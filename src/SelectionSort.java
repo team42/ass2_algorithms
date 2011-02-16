@@ -1,11 +1,26 @@
-import java.util.Arrays;
-
-
+/**
+ * The authors own implementation of a selection sort algorithm.
+ * 
+ * @author Lasse
+ *
+ */
 public class SelectionSort {
 	
+	/**
+	 * Method implementing the selection sort algorithm.
+	 * 
+	 * The first for loop takes a element, i, to be compared (running from start to end-1) 
+	 * and using the second for loop to get the next element, j, to compare to.	 * 
+	 * If the element i is bigger than j we switch the two values.
+	 * 
+	 * In order to measure the time it takes for the algorithm to sort the array, 
+	 * we use the System.nanoTime() method to get the time difference in nano seconds.
+	 * 
+	 * @param arr - Array to be sorted using the selection sort algorithm.
+	 */
 	public void run(int[] arr) {
 		System.out.print("SelectionSort: ");
-		long t0 = System.currentTimeMillis();
+		long t0 = System.nanoTime();
 		
 	    for (int i=0; i<arr.length-1; i++) {
 	        for (int j=i+1; j<arr.length; j++) {
@@ -17,7 +32,7 @@ public class SelectionSort {
 	            }
 	        }
 	    }
-	    long t = System.currentTimeMillis()- t0;
+	    long t = System.nanoTime() - t0;
 	   	System.out.println(t + "ms");
 	}	
 }

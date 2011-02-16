@@ -1,8 +1,12 @@
-import java.util.Collections;
 import java.util.Random;
 import java.util.Arrays;
 
-
+/**
+ * Class for creating and sorting arrays.
+ * 
+ * @author Lasse
+ *
+ */
 public class ArrayMaker {
 	private int[] array;
 

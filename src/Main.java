@@ -1,7 +1,7 @@
-import java.util.Arrays;
+import java.util.*;
 
 /**
- * $Id$
+ * Main class.
  * 
  * @author Lasse
  *
@@ -10,28 +10,42 @@ import java.util.Arrays;
 public class Main {
 
 	/**
+	 * Main method.
+	 * 
 	 * @param args
 	 */
 	public static void main(String[] args) {
 		
+		// Build arrays to use in test.
 		ArrayMaker arrays = new ArrayMaker();
-		int[] arr = arrays.getArray(50000);
-		
+		int[] arr = arrays.getArray(100000);		
 		int[] ascArr = arrays.ascSort(arr);
 		int[] descArr = arrays.descSort(ascArr);
-		
-//		System.out.println(Arrays.toString(arr));
-//		System.out.println(Arrays.toString(ascArr));
-//		System.out.println(Arrays.toString(descArr));
 			
-		QuickSort quickSort = new QuickSort();		
-		quickSort.run(arr);
-		quickSort.run(ascArr);
-		quickSort.run(descArr);
+		// Insert the running time of sorting algorithm into arraylist.
+		ArrayList<Long> arrList = new ArrayList<Long>();
+		for(int i=0;i<100;i++) {
+			arrList.add(QuickSort.run(arr));
+		}
+		
+		// Sum the elements in arraylist and divide by number of elements.
+		Iterator<Long> i = arrList.iterator();
+		float sum = 0;
+		while(i.hasNext()) {
+			sum += (Long) i.next();
+		}
+		
+		float avg = sum/arrList.size();
+		
+		System.out.println(avg + " ns");
+		
+//		quickSort.run(ascArr);
+//		quickSort.run(descArr);
+		
 
-		SelectionSort selSort = new SelectionSort();
-		selSort.run(arr);
-		selSort.run(ascArr);
-		selSort.run(descArr);
+//		SelectionSort selSort = new SelectionSort();
+//		selSort.run(arr);
+//		selSort.run(ascArr);
+//		selSort.run(descArr);
 	}
 }
