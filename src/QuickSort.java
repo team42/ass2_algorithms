@@ -3,7 +3,8 @@ import java.util.*;
 /**
  * Implementation of Javas built-in QuickSort algorithm.
  *   
- * @author Lasse
+ * @author Team42
+ * @version 21/2-2011 14:08
  *
  */
 public class QuickSort {

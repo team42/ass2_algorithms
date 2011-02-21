@@ -1,9 +1,8 @@
-import java.util.*;
-
 /**
  * Main class.
  * 
- * @author Lasse
+ * @author Team42
+ * @version 21/2-2011 14:08
  *
  */
 

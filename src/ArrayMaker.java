@@ -4,7 +4,8 @@ import java.util.Arrays;
 /**
  * Class for creating and sorting arrays.
  * 
- * @author Lasse
+ * @author Team42
+ * @version 21/2-2011 14:08
  *
  */
 public class ArrayMaker {
@@ -22,7 +23,7 @@ public class ArrayMaker {
         Random rand = new Random();
 
         for (int i = 0; i < array.length; i++) {
-            array[i] = rand.nextInt(41) + 10;
+            array[i] = rand.nextInt();
         }
         return array;
     }

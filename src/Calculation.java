@@ -4,7 +4,8 @@ import java.util.Iterator;
 /**
  * Used for calculating average running time of different sorting algorithms.
  * 
- * @author Lasse
+ * @author Team42
+ * @version 21/2-2011 14:08
  *
  */
 public class Calculation {
@@ -32,9 +33,9 @@ public class Calculation {
 		Iterator<Long> ite = arrList.iterator();
 		float sum = 0;
 		while(ite.hasNext()) {
-			sum += (Long) ite.next();
+			sum += ite.next();
 		}		
-		float avg = sum/arrList.size();		
+		float avg = ((float) sum)/arrList.size();
 		return avg;
 	}
 }
